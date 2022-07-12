@@ -10,7 +10,6 @@ def count_all(txt):
     i = 0
     son = 0
     harf = 0
-    javob = { "LETTERS":  0, "DIGITS": 0 }
     while i < len(txt):
         if str(txt[i]).isdigit():
             son += 1
@@ -18,8 +17,5 @@ def count_all(txt):
             harf += 1
 
         i += 1
-    javob["LETTERS"] = harf
-    javob["DIGITS"] = son
-
-    return javob
+    return {'LETTERS': harf, 'DIGIT': son}
 print(count_all("codeshool2022"))
